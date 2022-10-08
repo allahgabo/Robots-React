@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import CardList from '../components/CardList';
 // import {robots} from './robots';
 import SearchBox from '../components/SearchBox';
-import './containers/App.css';
+import './App.css';
 import Scroll from '../components/Scroll';
 
 class App extends Component{
@@ -30,8 +30,8 @@ class App extends Component{
 		// console.log(filterRobots);
 	}
 	render(){
-		const filterRobots=this.state.robots.filter(robots =>{
-			return robots.name.toLowerCase().includes(this.state.searchfiled.toLowerCase());
+		const filterRobots=this.state.robots.filter(robot =>{
+			return robot.name.toLowerCase().includes(this.state.searchfiled.toLowerCase());
 			
 		})
 		if (this.state.robots.length === 0){
